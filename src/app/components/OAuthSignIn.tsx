@@ -5,7 +5,7 @@ import { SignInPage, type AuthProvider } from "@toolpad/core/SignInPage";
 import { useTheme } from "@mui/material/styles";
 import { Button, Stack } from "@mui/material";
 
-const providers = [
+const providers: AuthProvider[] = [
     { id: "github", name: "GitHub" },
     // { id: "google", name: "Google" },
     // { id: "facebook", name: "Facebook" },
@@ -37,7 +37,7 @@ export default function OAuthSignIn() {
                         paddingLeft: "30px",
                         paddingRight: "30px",
                         fontSize: "18px",
-                        fontWeight: "bold"
+                        fontWeight: "bold",
                     }}
                 >
                     新規登録はこちら
