@@ -14,7 +14,9 @@
 - npm install @mui/material @emotion/react @emotion/styled
 - npm install @fontsource/roboto
 - npm i @toolpad/core
-- npm install @mui/icons-material 
+- npm install @mui/icons-material
+- npm install @mui/x-date-pickers
+- npm install dayjs
 
 <br/>
 <br/>

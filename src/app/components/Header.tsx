@@ -5,10 +5,10 @@ import Image from "next/image";
 
 const Header = () => {
     return (
-        <AppBar component="header" position="static">
+        <AppBar component="header" position="fixed">
             <Toolbar sx={{ justifyContent: "space-between" }}>
                 <Typography variant="h6" component="h2">
-                    <Link href={"/"}>ToDoアプリ</Link>
+                    <Link href={"/todos"}>ToDoApp</Link>
                 </Typography>
                 <Stack
                     direction="row"
@@ -26,7 +26,7 @@ const Header = () => {
                             src={"/default_icon.png"}
                         />
                     </Link>
-                    <Link href={"/"}>ログアウト</Link>
+                    <Link href={"/"}>LOGOUT</Link>
                 </Stack>
             </Toolbar>
         </AppBar>

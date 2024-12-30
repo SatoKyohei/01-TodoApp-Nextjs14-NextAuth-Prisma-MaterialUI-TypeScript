@@ -4,6 +4,7 @@ import { Noto_Sans_JP } from "next/font/google";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import { Box } from "@mui/material";
+import Providers from "@/app/providers/Providers";
 
 // NotoSansJPを定義
 const notoSansJP = Noto_Sans_JP({
@@ -24,17 +25,19 @@ export default function RootLayout({
     return (
         <html lang="ja">
             <body className={`${notoSansJP.className}`}>
-                <Box
-                    sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        minHeight: "100vh",
-                    }}
-                >
-                    <Header />
-                    {children}
-                    <Footer />
-                </Box>
+                <Header />
+                <Providers>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            minHeight: "100vh",
+                            paddingTop: "64px",
+                        }}>
+                        {children}
+                    </Box>
+                </Providers>
+                <Footer />
             </body>
         </html>
     );
